@@ -18,3 +18,16 @@ imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
 imputer.fit(X[:, 1:3])
 X[:, 1:3] = imputer.transform(X[:, 1:3])
 print(X)
+
+# Encoding categorical data
+# Encoding the Independent Variable
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], remainder='passthrough')
+X = np.array(ct.fit_transform(X))
+print(X)
+# Encoding the Dependent Variable
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+y = le.fit_transform(y)
+print(y)
