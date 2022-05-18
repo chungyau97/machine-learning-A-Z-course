@@ -11,8 +11,16 @@ X = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
 
 # Training the Linear Regression model on the whole dataset
+from sklearn.linear_model import LinearRegression
+lin_reg = LinearRegression()
+lin_reg.fit(X, y)
 
 # Training the Polynomial Regression model on the whole dataset
+from sklearn.preprocessing import PolynomialFeatures
+poly_reg = PolynomialFeatures(degree = 2) #Start from 2 
+X_poly = poly_reg.fit_transform(X)
+lin_reg_2 = LinearRegression()
+lin_reg_2.fit(X_poly, y)
 
 # Visualising the Linear Regression results
 
