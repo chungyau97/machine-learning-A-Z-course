@@ -29,12 +29,15 @@ regressor = SVR(kernel = 'rbf')
 regressor.fit(X, y)
 
 # Predicting a new result
-X_input = sc_X.transform([[6.5]])
-y_pred =regressor.predict(X_input)
+y_pred = sc_y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])).reshape(-1,1))
 print(y_pred)
-y_output = sc_y.inverse_transform([y_pred])
-print(y_output)
 
 # Visualising the SVR results
+plt.scatter(sc_X.inverse_transform(X), sc_y.inverse_transform(y), color = 'red')
+plt.plot(sc_X.inverse_transform(X), sc_y.inverse_transform(regressor.predict(X).reshape(-1,1)), color = 'blue')
+plt.title('Truth or Bluff (SVR)')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
 
 # Visualising the SVR results (for higher resolution and smoother curve)
