@@ -24,6 +24,9 @@ print(X)
 print(y)
 
 # Training the SVR model on the whole dataset
+from sklearn.svm import SVR
+regressor = SVR(kernel = 'rbf')
+regressor.fit(X, y)
 
 # Predicting a new result
 
