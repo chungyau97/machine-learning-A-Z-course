@@ -16,5 +16,6 @@ regressor = RandomForestRegressor(n_estimators = 10, random_state = 0)
 regressor.fit(X, y)
 
 # Predicting a new result
+regressor.predict([[6.5]])
 
 # Visualising the Random Forest Regression results (higher resolution)
