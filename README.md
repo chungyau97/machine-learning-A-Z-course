@@ -6,6 +6,7 @@ A machine learning template to reduce development time.
 ### Built With
 
 * [Python](https://www.python.org/)
+* [scikit-learn](https://scikit-learn.org/)
 * [Machine Learning A-Z™: Hands-On Python & R In Data Science](https://www.udemy.com/course/machinelearning/)
 
 <!-- GETTING STARTED -->
