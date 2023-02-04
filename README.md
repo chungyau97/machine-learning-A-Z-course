@@ -1,4 +1,4 @@
-# machine-learning
+# machine-learning-A-Z-course
 
 ## About The Project
 A machine learning template to reduce development time.
@@ -21,4 +21,4 @@ Coming soon...
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/chungyau97/machine-learning/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/chungyau97/machine-learning-A-Z-course/blob/main/LICENSE) for more information.
